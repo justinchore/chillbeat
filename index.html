@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class = "whole-page">
+    <script src="./dist/main.js"></script>
+    <div class="main-controls-wrap">
+      <div class="main-controls-banner"><h2>OUTPUT/MAIN</h2></div>
+      <div class="main-controls-elements">
+         <div class="bpm-slider-wrap">
+           <label class="slider">BPM ADJUST
+           <input type="range" min="40" max="200" value="80" class="slider" id="bpm-slider">
+          </label>
+        </div>
+        <div class="swing-slider-wrap">
+          <label class="slider">SWING ADJUST
+            <input type="range" min="0" max="1" value="0" step="0.1" class="slider" id="swing-slider">
+          </label>
+        </div>
+         <div class="play/pause-wrap">
+             <p>HIT SPACEBAR PLAY/PAUSE</p>
+             <button id="playback-button" type="button">&#9654</button>
+       
+         </div>
+        </div>
+         
+      </div>
+  
+    <div class="drum-machine-wrap">
+          <div class="drum-samples">
+            <button class= "drum-sample-btn" id="kit-1-btn">KIT 1</button>
+            <button class= "drum-sample-btn" id="kit-2-btn">KIT 2</button>
+          </div>
+      <div class="drum-logo">
+        <span></span><h2>DS-906 DRUM MACHINE</h2>
+        <button class="drums-btn" id="drums-clear-button">CLEAR DRUMS</button></span>
+       
+           <button class="drums-btn" id="sample-8th-btn">BEAT 1</button>
+           <button class="drums-btn" id="sample-16th-btn">BEAT 2</button>
+      
+      </div>
+      <div class = "bar-headers">      
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+          <p>5</p>
+          <p>6</p>
+          <p>7</p>
+          <p>8</p>
+      </div>
+      <div class="drums-instrument-name"><p>HH</p></div>
+      <div class="row">
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+      </div>
+      <div class="drums-instrument-name">
+        <p>SN</p>
+      </div>
+      <div class="row">
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+      </div>
+      <div class="drums-instrument-name">
+        <p>K</p>
+      </div>
+      <div class="row">
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+        <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
+      </div>
+    </div>
+ 
+    <div>
+    
+    </div>
+
+
+  </div>
+   
+  </body>
+</html>
+
+
+
+
+
