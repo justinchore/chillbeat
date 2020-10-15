@@ -1,12 +1,36 @@
 import * as Tone from 'tone'; 
 
 document.addEventListener('DOMContentLoaded', function () {
+    
     console.clear();
-
+    document.body.onkeydown = (e) => {
+        // debugger
+        if (e.code === "Space") {
+            e.preventDefault();
+            if (Tone.context.state !== 'running') {
+                // debugger
+                Tone.context.resume();
+                document.getElementById("playback-button").innerHTML = "&#9612&#9612";
+            } else if (Tone.Transport.state === "paused") {
+                Tone.Transport.stop()
+                Tone.Transport.start();
+                document.getElementById("playback-button").innerHTML = "&#9612&#9612";
+            } else {
+                Tone.Transport.pause();
+                document.getElementById("playback-button").innerHTML = "&#9654";
+            }
+        }
+    };
+     
+    let buffer1 = new Tone.Buffer("src/samples/hh1.wav");
+    let buffer2 = new Tone.Buffer("src/samples/snare1.wav"); 
+    let buffer3 = new Tone.Buffer("src/samples/kick1.wav");
+    
     let drums = [
-        new Tone.Player({ url: "src/samples/hh1.wav" }),
-        new Tone.Player({ url: "src/samples/snare1.wav" }),
-        new Tone.Player({ url: "src/samples/kick1.wav" })
+        
+        new Tone.Player(buffer1),
+        new Tone.Player(buffer2),
+        new Tone.Player(buffer3)
     ]
 
 
@@ -18,8 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
     Tone.Transport.bpm.value = bpmSetter();
     Tone.Transport.scheduleRepeat(repeat, '16n');
     Tone.Transport.start();
-
-  
 
     document.getElementById("drums-clear-button").addEventListener('mousedown', () => {
         clearDrums();
@@ -36,21 +58,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }); 
 
     document.getElementById("kit-1-btn").addEventListener('mousedown', () => {
+        buffer1 = new Tone.Buffer("src/samples/hh1.wav");
+        buffer2 = new Tone.Buffer("src/samples/snare1.wav"); 
+        buffer3 = new Tone.Buffer("src/samples/kick1.wav");
         drums = [
-            new Tone.Player({ url: "src/samples/hh1.wav" }),
-            new Tone.Player({ url: "src/samples/snare1.wav" }),
-            new Tone.Player({ url: "src/samples/kick1.wav" })
+        new Tone.Player(buffer1),
+        new Tone.Player(buffer2),
+        new Tone.Player(buffer3)
         ]
         drums.forEach(drum => drum.toDestination());
     })
 
     document.getElementById("kit-2-btn").addEventListener('mousedown', () => {
-        drums = [
-            new Tone.Player({ url: "src/samples/hh2.wav" }),
-            new Tone.Player({ url: "src/samples/snare2.wav" }),
-            new Tone.Player({ url: "src/samples/kick2.wav" })
-        ]
+        const buffer4 = new Tone.Buffer("src/samples/hh2.wav");
+        const buffer5 = new Tone.Buffer("src/samples/snare2.wav");
+        const buffer6 = new Tone.Buffer("src/samples/kick2.wav");
+
+        let hh2 = new Tone.Player(buffer4); 
+        hh2.volume.value = -10; 
+        let snare2 = new Tone.Player(buffer5)
+        let kick2 = new Tone.Player(buffer6)
+        kick2.volume.value = -1
+        drums = [hh2, snare2, kick2]
         drums.forEach(drum => drum.toDestination());
+   
     })
 
     
@@ -155,8 +186,6 @@ document.addEventListener('DOMContentLoaded', function () {
             $ks[i + 3].querySelector('input').checked = true;
         }
     }
-
-    
 
 
 });

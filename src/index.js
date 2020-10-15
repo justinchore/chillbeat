@@ -1,7 +1,10 @@
 import "./styles/index.scss";
 import "./styles/drummachine.scss";
+
 import "./scripts/drumMachine.js";
+import "./scripts/chordalSequencer.js";
 import "./styles/mainControls.scss"; 
+import "./styles/chordalSequencer.scss";
 import * as Tone from "tone";
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -20,15 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
         //     }
         // });
         
-        
-        document.body.onkeydown = (e) => {
+        document.body.onkeydown = (e) => { 
             // debugger
             if (e.code === "Space") {
+                e.preventDefault();
                 if (Tone.context.state !== 'running') {
                     // debugger
                     Tone.context.resume();
                     document.getElementById("playback-button").innerHTML = "&#9612&#9612";
                 } else if (Tone.Transport.state === "paused") {
+                    Tone.Transport.stop()
                     Tone.Transport.start();
                     document.getElementById("playback-button").innerHTML = "&#9612&#9612";
                 } else {

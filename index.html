@@ -9,7 +9,6 @@
   </head>
 
   <body>
-    <div class = "whole-page">
     <script src="./dist/main.js"></script>
     <div class="main-controls-wrap">
       <div class="main-controls-banner"><h2>OUTPUT/MAIN</h2></div>
@@ -166,14 +165,596 @@
         <label class="drum-key-wrap"><input class="drum-input-key" type="checkbox" /><span class="drum-key"></span></label>
       </div>
     </div>
- 
-    <div>
-    
+  
+    <div class="chordal-synth-wrap">
+      <div class="chords-logo">
+        <span></span>
+        <h2>CB-32 CHORD SEQUENCER</h2>
+        <button class="chords-btn" id="chords-clear-button">CLEAR CHORDS</button></span>
+        
+        <button class="chords-btn" id="chords-example-one">EX.1</button>
+        <button class="chords-btn" id="chords-example-two">EX.2</button>
+      </div>
+       <div class="chord-length-slider">
+               <label class="slider">NOTE LENGTH
+                       <input type="range" min="1" max="5" value="5" class="slider" id= "note-length-slider">
+               </label>
+       </div>
+      <div class="chords-bar-headers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+      </div>
+        <div class="chords-instrument-name">
+            <p>I</p>
+        </div>
+      <div class="chordal-row">
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+            class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+
+     </div>
+    <div class="chords-instrument-name">
+        <p>IV</p>
     </div>
-
-
-  </div>
-   
+    <div class="chordal-row">
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+    
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+    </div>
+    <div class="chords-instrument-name">
+        <p>VI</p>
+    </div>
+    <div class="chordal-row">
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+    </div>
+    <div class="chords-instrument-name">
+        <p>V</p>
+    </div>
+    <div class="chordal-row">
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+    </div>
+  
+        <div class="chords-bar-headers-2">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6</p>
+            <p>7</p>
+            <p>8</p>
+        </div>
+        <div class="chords-instrument-name">
+            <p>VII</p>
+        </div>
+    <div class="chordal-row">
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+            <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                    class="chords-key"></span></label>
+    </div>
+    <div class="chords-instrument-name">
+        <p>bVI</p>
+    </div>
+    <div class="chordal-row">
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+                <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                        class="chords-key"></span></label>
+    </div>
+    <div class="chords-instrument-name">
+        <p>III</p>
+    </div>
+    <div class="chordal-row">
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+                    <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                            class="chords-key"></span></label>
+    </div>
+    <div class="chords-instrument-name">
+        <p>II</p>
+    </div>
+    <div class="chordal-row">
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+                        <label class="chords-key-wrap"><input class="chords-input-key" type="checkbox" /><span
+                                class="chords-key"></span></label>
+    </div>
   </body>
 </html>
 
