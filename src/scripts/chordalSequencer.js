@@ -23,18 +23,33 @@ document.addEventListener('DOMContentLoaded', function () {
         exampleOne();
     });
 
+    document.getElementById("chords-example-two").addEventListener('mousedown', () => {
+        clearChords(); 
+        exampleTwo(); 
+    })
 
+    document.getElementById("chords-rev-slider").addEventListener("change" , () => {
+        // debugger
+        sampler.disconnect(rev).toDestination();
+        let level = parseFloat(document.getElementById("chords-rev-slider").value, 10); 
+        console.log(level); 
+        rev = new Tone.Reverb(level).toDestination();
+        sampler.connect(rev).toDestination(); 
+    })
 
-    let rev = new Tone.Reverb(1.0).toDestination();
-    // var autoWah = new Tone.AutoWah(50, 6, -30).toMaster();
-    // connect the player to the filter, distortion and then to the master output
-
+    // connect the player to the filter, disto rtion and then to the master output
+ 
     // synths[0].oscillator.type = 'triangle'; 
     // synths[1].oscillator.type = 'sine';
     // synths[2].oscillator.type = 'sawtooth';
 
 
+    // let revLev = parseFloat(document.getElementById('chords-rev-slider').value, 10);
+    // console.log(revLev);
+    let rev = new Tone.Reverb(0.1).toDestination();  
     sampler.connect(rev).toDestination(); 
+
+
     const $rows = document.querySelectorAll(".chordal-row");
     let index = 0;
 
@@ -42,11 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
     Tone.Transport.scheduleRepeat(repeat, '16n');
     // Tone.Transport.start();
 
-
     function repeat(time) {
         let step = index % 32;
 
-        for (let i = 0; i < $rows.length; i++) {
+        for (let i = 0; i < $rows.length; i++) { 
 
             Tone.Transport.swing = swingSetter();
             Tone.Transport.swingSubdivision = "16n"
@@ -60,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             $key.style.border = "2px solid red"
             let noteLength = noteLengthSetter(); 
-
+            
             if ($input.checked && i === 0) {
                 // drum.triggerAttackRelease(drum, '16n', time);
                 sampler.triggerAttackRelease("C3",noteLength, time);
@@ -102,13 +116,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function swingSetter() {
         let swingLevel = parseFloat(document.getElementById('swing-slider').value, 10);
-        return swingLevel
+        return swingLevel;
     }
+
+    function getRev() {
+        let level = parseFloat(document.getElementById("chords-rev-slider").value, 10);
+        return level; 
+    }
+
+  
 
     function noteLengthSetter() {
         let length = parseInt(document.getElementById('note-length-slider').value, 10);
         if (length === 5) {
-            console.log("1n")
             return "1n"
         } else if (length === 4) {
             console.log("2n")
@@ -140,12 +160,9 @@ document.addEventListener('DOMContentLoaded', function () {
         let $first = allChords.slice(0, 32);
         let $second = allChords.slice(32, 64);
         let $third = allChords.slice(64, 96);
-        let $fourth = allChords.slice(96, 128); 
-        let $fifth = allChords.slice(128, 160); 
         let $sixth = allChords.slice(160, 192);
         let $seventh = allChords.slice(192, 224); 
-        let $eigth = allChords.slice(224, 256);
-        console.log($eigth) 
+        let $eigth = allChords.slice(224, 256); 
         
         $first[0].querySelector('input').checked = true; 
         $first[12].querySelector('input').checked = true; 
@@ -159,5 +176,19 @@ document.addEventListener('DOMContentLoaded', function () {
         $eigth[22].querySelector('input').checked = true; 
         $eigth[29].querySelector('input').checked = true; 
 
+    }
+
+    function exampleTwo() {
+        let $allChords = document.querySelectorAll('.chords-key-wrap');
+        let allChords = Array.from($allChords);
+        let $first = allChords.slice(0, 32);
+        let $second = allChords.slice(32, 64);
+        let $third = allChords.slice(64, 96);
+        let $fourth = allChords.slice(96, 128); 
+
+        $first[12].querySelector('  input').checked = true; 
+        $second[8].querySelector('input').checked = true; 
+        $third[0].querySelector('input').checked = true; 
+        $fourth[28].querySelector('input').checked = true; 
     }
 });

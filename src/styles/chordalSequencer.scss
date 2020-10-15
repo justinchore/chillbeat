@@ -130,22 +130,17 @@
   box-shadow: none;
 }
 
-.chord-length-slider label {
+.chords-effects-wrap {
+  display: flex; 
+  justify-content: space-between;
+  width: 400px;
+  margin: auto;
+}
+
+.chords-slider label {
     font-family: "Courier New", Courier, monospace;
     color: white;
     font-weight: bold;
+    font-size: 12px;
     margin: auto; 
-
-}
-
-.chord-length-slider {
-    margin-top: 7px;
-    margin-left: 32px;
-    border: 2px solid black;
-    width: 136px;
-    background-color: #430505;
-    /* align-items: center; */
-    display: flex;
-    justify-content: center;
-    margin-bottom: -13px;
 }

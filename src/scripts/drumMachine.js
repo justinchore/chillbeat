@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.code === "Space") {
             e.preventDefault();
             if (Tone.context.state !== 'running') {
-                // debugger
+                let buffer1 = new Tone.Buffer("src/samples/hh1.wav");
+                let buffer2 = new Tone.Buffer("src/samples/snare1.wav");
+                let buffer3 = new Tone.Buffer("src/samples/kick1.wav");
                 Tone.context.resume();
                 document.getElementById("playback-button").innerHTML = "&#9612&#9612";
             } else if (Tone.Transport.state === "paused") {
@@ -25,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let buffer1 = new Tone.Buffer("src/samples/hh1.wav");
     let buffer2 = new Tone.Buffer("src/samples/snare1.wav"); 
     let buffer3 = new Tone.Buffer("src/samples/kick1.wav");
-    
-    let drums = [
-        
-        new Tone.Player(buffer1),
+    let hh1 = new Tone.Player(buffer1); 
+    hh1.volume.value = -20;
+    let drums = [    
+        hh1,
         new Tone.Player(buffer2),
         new Tone.Player(buffer3)
     ]
@@ -61,8 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
         buffer1 = new Tone.Buffer("src/samples/hh1.wav");
         buffer2 = new Tone.Buffer("src/samples/snare1.wav"); 
         buffer3 = new Tone.Buffer("src/samples/kick1.wav");
+        let hh1 = new Tone.Player(buffer1)
+        hh1.volume.value = -20; 
         drums = [
-        new Tone.Player(buffer1),
+        hh1,
         new Tone.Player(buffer2),
         new Tone.Player(buffer3)
         ]
@@ -75,10 +79,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const buffer6 = new Tone.Buffer("src/samples/kick2.wav");
 
         let hh2 = new Tone.Player(buffer4); 
-        hh2.volume.value = -10; 
+        hh2.volume.value = -20; 
         let snare2 = new Tone.Player(buffer5)
         let kick2 = new Tone.Player(buffer6)
-        kick2.volume.value = -1
+        kick2.volume.value = -3;
         drums = [hh2, snare2, kick2]
         drums.forEach(drum => drum.toDestination());
    
