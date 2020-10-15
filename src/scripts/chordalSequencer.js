@@ -80,22 +80,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 sampler.triggerAttackRelease("C3",noteLength, time);
                 // chordNotes[i].start(time);
             } else if ($input.checked && i === 1) { 
+                sampler.volume.value = -12
                 sampler.triggerAttackRelease("A4", noteLength, time);
             } else if ($input.checked && i === 2) {
+                sampler.volume.value = -12
                 sampler.triggerAttackRelease("B4", noteLength, time);
             } else if ($input.checked && i === 3) {
+                sampler.volume.value = -12
                 sampler.triggerAttackRelease("C4", noteLength, time);
             } else if ($input.checked && i === 4) {
+                sampler.volume.value = -12
                 sampler.triggerAttackRelease("D4", noteLength, time);
             } else if ($input.checked && i === 5) {
+                sampler.volume.value = -12
                 sampler.triggerAttackRelease("E4", noteLength, time);
             } else if ($input.checked && i === 6) {
+                sampler.volume.value = -12
                 sampler.triggerAttackRelease("F4", noteLength, time);
             } else if ($input.checked && i === 7) {
                 sampler.triggerAttackRelease("G4", noteLength, time);
             }
         }
-
         setTimeout(function () {
             for (let i = 0; i < $rows.length; i++) {
                 let $label = $rows[i].querySelector(`label:nth-child(${step + 1})`);
