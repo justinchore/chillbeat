@@ -1,8 +1,10 @@
 import "./styles/index.scss";
 import "./styles/drummachine.scss";
 
+
 import "./scripts/drumMachine.js";
 import "./scripts/chordalSequencer.js";
+import "./styles/bassSynth.scss";
 import "./styles/mainControls.scss"; 
 import "./styles/chordalSequencer.scss";
 import * as Tone from "tone";
