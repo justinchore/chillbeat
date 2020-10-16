@@ -1,49 +1,48 @@
 import "./styles/index.scss";
 import "./styles/drummachine.scss";
-
-
 import "./scripts/drumMachine.js";
 import "./scripts/chordalSequencer.js";
+import "./scripts/bassSynth.js";
 import "./styles/bassSynth.scss";
 import "./styles/mainControls.scss"; 
 import "./styles/chordalSequencer.scss";
 import * as Tone from "tone";
 
-document.addEventListener('DOMContentLoaded', function () {
-        // document.getElementById("playback-button").addEventListener('mousedown', (e) => {
-        //     e.preventDefault();
-        //     if (Tone.context.state !== 'running') {
-        //         // debugger
-        //         Tone.context.resume();
-        //         document.getElementById("playback-button").innerHTML = "Playing";
-        //     } else if (Tone.Transport.state === "paused") {
-        //         Tone.Transport.start();
-        //         document.getElementById("playback-button").innerHTML = "Playing";
-        //     } else {
-        //         Tone.Transport.pause();
-        //         document.getElementById("playback-button").innerHTML = "Paused";
-        //     }
-        // });
+// document.addEventListener('DOMContentLoaded', function () {
+//         // document.getElementById("playback-button").addEventListener('mousedown', (e) => {
+//         //     e.preventDefault();
+//         //     if (Tone.context.state !== 'running') {
+//         //         // debugger
+//         //         Tone.context.resume();
+//         //         document.getElementById("playback-button").innerHTML = "Playing";
+//         //     } else if (Tone.Transport.state === "paused") {
+//         //         Tone.Transport.start();
+//         //         document.getElementById("playback-button").innerHTML = "Playing";
+//         //     } else {
+//         //         Tone.Transport.pause();
+//         //         document.getElementById("playback-button").innerHTML = "Paused";
+//         //     }
+//         // });
         
-        document.body.onkeydown = (e) => { 
-            // debugger
-            if (e.code === "Space") {
-                e.preventDefault();
-                if (Tone.context.state !== 'running') {
-                    // debugger
-                    Tone.context.resume();
-                    document.getElementById("playback-button").innerHTML = "&#9612&#9612";
-                } else if (Tone.Transport.state === "paused") {
-                    Tone.Transport.stop()
-                    Tone.Transport.start();
-                    document.getElementById("playback-button").innerHTML = "&#9612&#9612";
-                } else {
-                    Tone.Transport.pause();
-                    document.getElementById("playback-button").innerHTML = "&#9654";
-                }
-            }
-        };
-});
+//         document.body.onkeydown = (e) => { 
+//             // debugger
+//             if (e.code === "Space") {
+//                 e.preventDefault();
+//                 if (Tone.context.state !== 'running') {
+//                     // debugger
+//                     Tone.context.resume();
+//                     document.getElementById("playback-button").innerHTML = "&#9612&#9612";
+//                 } else if (Tone.Transport.state === "paused") {
+//                     Tone.Transport.stop()
+//                     Tone.Transport.start();
+//                     document.getElementById("playback-button").innerHTML = "&#9612&#9612";
+//                 } else {
+//                     Tone.Transport.pause();
+//                     document.getElementById("playback-button").innerHTML = "&#9654";
+//                 }
+//             }
+//         };
+// });
 
     // const $playingOrPaused = document.getElementById("playback-button");
 

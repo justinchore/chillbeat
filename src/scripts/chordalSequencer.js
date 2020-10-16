@@ -2,6 +2,26 @@ import * as Tone from 'tone';
 
 document.addEventListener('DOMContentLoaded', function () {
     console.clear();
+    document.body.onkeydown = (e) => {
+        // debugger
+        if (e.code === "Space") {
+            e.preventDefault();
+            if (Tone.context.state !== 'running') {
+                let buffer1 = new Tone.Buffer("src/samples/hh1.wav");
+                let buffer2 = new Tone.Buffer("src/samples/snare1.wav");
+                let buffer3 = new Tone.Buffer("src/samples/kick1.wav");
+                Tone.context.resume();
+                document.getElementById("playback-button").innerHTML = "&#9612&#9612";
+            } else if (Tone.Transport.state === "paused") {
+                Tone.Transport.stop()
+                Tone.Transport.start();
+                document.getElementById("playback-button").innerHTML = "&#9612&#9612";
+            } else {
+                Tone.Transport.pause();
+                document.getElementById("playback-button").innerHTML = "&#9654";
+            }
+        }
+    };
 
    let sampler = new Tone.Sampler({
        "C3" : "src/samples/cmaj7.mp3",
@@ -55,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     Tone.Transport.bpm.value = bpmSetter();
     Tone.Transport.scheduleRepeat(repeat, '16n');
-    // Tone.Transport.start();
+    Tone.Transport.start();
 
     function repeat(time) {
         let step = index % 32;
