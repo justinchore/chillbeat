@@ -92,7 +92,9 @@ document.addEventListener('DOMContentLoaded', function () {
             let $input = $label.querySelector(`.chords-input-key`);
             let $key = $label.querySelector(`.chords-key`);
 
-            $key.style.border = "2px solid red"
+           
+                $key.style.border = "2px solid red"
+          
             let noteLength = noteLengthSetter(); 
             
             if ($input.checked && i === 0) {

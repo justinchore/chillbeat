@@ -10,6 +10,7 @@
 
   <body>
     <script src="./dist/main.js"></script>
+    
     <div class="main-controls-wrap">
       <div class="main-controls-banner"><h2>OUTPUT/MAIN</h2></div>
       <div class="main-controls-elements">
@@ -34,13 +35,13 @@
   
     <div class="drum-machine-wrap">
           <div class="drum-samples">
-            <button class= "drum-sample-btn" id="kit-1-btn">KIT 1</button>
-            <button class= "drum-sample-btn" id="kit-2-btn">KIT 2</button>
+        <label class="slider">VOLUME
+                <input type="range" min="-70" max="6" value="-10" class="slider" id="drums-volume-slider">
+        </label>
           </div>
       <div class="drum-logo">
         <span></span><h2>DS-906 DRUM MACHINE</h2>
         <button class="drums-btn" id="drums-clear-button">CLEAR DRUMS</button></span>
-       
            <button class="drums-btn" id="sample-8th-btn">BEAT 1</button>
            <button class="drums-btn" id="sample-16th-btn">BEAT 2</button>
       
@@ -773,9 +774,6 @@
                         <span></span>
                         <h2>BB-1 BASS</h2>
                         <button class="bass-btn" id="bass-clear-button">CLEAR</button></span>
-        
-                        <button class="bass-btn" id="bass-example-one">EX.1</button>
-                        <button class="bass-btn" id="bass-example-two">EX.2</button>
                 </div>
                 <div class="bass-effects-wrap">
                         <div class="bass-slider">

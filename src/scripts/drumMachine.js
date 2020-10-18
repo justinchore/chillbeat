@@ -59,34 +59,34 @@ document.addEventListener('DOMContentLoaded', function () {
         sixteenthBeat();
     }); 
 
-    document.getElementById("kit-1-btn").addEventListener('mousedown', () => {
-        buffer1 = new Tone.Buffer("src/samples/hh1.wav");
-        buffer2 = new Tone.Buffer("src/samples/snare1.wav"); 
-        buffer3 = new Tone.Buffer("src/samples/kick1.wav");
-        let hh1 = new Tone.Player(buffer1)
-        hh1.volume.value = -20; 
-        drums = [
-        hh1,
-        new Tone.Player(buffer2),
-        new Tone.Player(buffer3)
-        ]
-        drums.forEach(drum => drum.toDestination());
-    })
+    // document.getElementById("kit-1-btn").addEventListener('mousedown', () => {
+    //     buffer1 = new Tone.Buffer("src/samples/hh1.wav");
+    //     buffer2 = new Tone.Buffer("src/samples/snare1.wav"); 
+    //     buffer3 = new Tone.Buffer("src/samples/kick1.wav");
+    //     let hh1 = new Tone.Player(buffer1)
+    //     hh1.volume.value = -20; 
+    //     drums = [
+    //     hh1,
+    //     new Tone.Player(buffer2),
+    //     new Tone.Player(buffer3)
+    //     ]
+    //     drums.forEach(drum => drum.toDestination());
+    // })
 
-    document.getElementById("kit-2-btn").addEventListener('mousedown', () => {
-        const buffer4 = new Tone.Buffer("src/samples/hh2.wav");
-        const buffer5 = new Tone.Buffer("src/samples/snare2.wav");
-        const buffer6 = new Tone.Buffer("src/samples/kick2.wav");
+    // document.getElementById("kit-2-btn").addEventListener('mousedown', () => {
+    //     const buffer4 = new Tone.Buffer("src/samples/hh2.wav");
+    //     const buffer5 = new Tone.Buffer("src/samples/snare2.wav");
+    //     const buffer6 = new Tone.Buffer("src/samples/kick2.wav");
 
-        let hh2 = new Tone.Player(buffer4); 
-        hh2.volume.value = -20; 
-        let snare2 = new Tone.Player(buffer5)
-        let kick2 = new Tone.Player(buffer6)
-        kick2.volume.value = -3;
-        drums = [hh2, snare2, kick2]
-        drums.forEach(drum => drum.toDestination());
+    //     let hh2 = new Tone.Player(buffer4); 
+    //     hh2.volume.value = -20; 
+    //     let snare2 = new Tone.Player(buffer5)
+    //     let kick2 = new Tone.Player(buffer6)
+    //     kick2.volume.value = -3;
+    //     drums = [hh2, snare2, kick2]
+    //     drums.forEach(drum => drum.toDestination());
    
-    })
+    // })
 
     
 
@@ -109,6 +109,12 @@ document.addEventListener('DOMContentLoaded', function () {
             let $key = $label.querySelector(`.drum-key`); 
             
             $key.style.border = "2px solid red"
+            let volLevel = volumeSetter();
+            if (i != 0) {
+                drum.volume.value = volLevel; 
+            } else {
+                drum.volume.value = (volLevel - 20); 
+            }
 
             if ($input.checked) {
                 // drum.triggerAttackRelease(drum, '16n', time);
@@ -137,6 +143,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function swingSetter() {
         let swingLevel = parseFloat(document.getElementById('swing-slider').value, 10);
         return swingLevel
+    }
+
+    function volumeSetter() {
+        let vol = parseInt(document.getElementById('drums-volume-slider').value, 10);
+        return vol;
     }
 
     function clearDrums() {

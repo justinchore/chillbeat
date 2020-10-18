@@ -52,17 +52,22 @@ document.addEventListener('DOMContentLoaded', function () {
         synth.connect(rev).toDestination();
     })
 
-    document.getElementById("chords-rev-slider").addEventListener("change", () => {
-        // debugger
-        sampler.disconnect(rev).toDestination();
-        let level = parseFloat(document.getElementById("chords-rev-slider").value, 10);
-        console.log(level);
-        rev = new Tone.Reverb(level).toDestination();
-        sampler.connect(rev).toDestination();
-    })
+    document.getElementById("bass-clear-button").addEventListener('mousedown', () => {
+        clearBass();
+    });
+
+    // document.getElementById("chords-rev-slider").addEventListener("change", () => {
+    //     // debugger
+    //     sampler.disconnect(rev).toDestination();
+    //     let level = parseFloat(document.getElementById("chords-rev-slider").value, 10);
+    //     console.log(level);
+    //     rev = new Tone.Reverb(level).toDestination();
+    //     sampler.connect(rev).toDestination();
+    // })
 
     let rev = new Tone.Reverb(0.1).toDestination();
     synth.connect(rev).toDestination(); 
+    synth.volume.value = -10;
 
     const $rows = document.querySelectorAll(".bass-row"); 
     console.log($rows); 
@@ -93,29 +98,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if ($input.checked && i === 0) {
                 // drum.triggerAttackRelease(drum, '16n', time);
-                synth.triggerAttackRelease("C2", noteLength, time);
+                synth.triggerAttackRelease("C2", '16n', time);
                 // chordNotes[i].start(time);
             } else if ($input.checked && i === 1) {
-                synth.triggerAttackRelease("F1", noteLength, time);
+                synth.triggerAttackRelease("F1", '16n', time);
              
             } else if ($input.checked && i === 2) {
-                synth.triggerAttackRelease("A1", noteLength, time);
+                synth.triggerAttackRelease("A1", '16n', time);
              
             } else if ($input.checked && i === 3) {
               
-                synth.triggerAttackRelease("G1", noteLength, time);
+                synth.triggerAttackRelease("G1", '16n', time);
             } else if ($input.checked && i === 4) {
               
-                synth.triggerAttackRelease("B1", noteLength, time);
+                synth.triggerAttackRelease("B1", '16n', time);
             } else if ($input.checked && i === 5) {
             
-                synth.triggerAttackRelease("Bb1", noteLength, time);
+                synth.triggerAttackRelease("Bb1", '16n', time);
             } else if ($input.checked && i === 6) {
         
-                synth.triggerAttackRelease("E2", noteLength, time); 
+                synth.triggerAttackRelease("E2", '16n', time); 
             } else if ($input.checked && i === 7) {
         
-                synth.triggerAttackRelease("D2", noteLength, time);
+                synth.triggerAttackRelease("D2", '16n', time);
             }
         }
         setTimeout(function () {
@@ -144,23 +149,31 @@ document.addEventListener('DOMContentLoaded', function () {
         return vol;
     }
 
-    function noteLengthSetter() {
-        let length = parseInt(document.getElementById('bass-length-slider').value, 10);
-        if (length === 5) {
-            return "1n"
-        } else if (length === 4) {
-            console.log("2n")
-            return "2n"
-        } else if (length === 3) {
-            console.log("4n")
-            return "4n"
-        } else if (length === 2) {
-            console.log("8n")
-            return "8n"
-        } else if (length === 1) {
-            console.log("16n")
-            return "16n"
-        }
+    function clearBass() {
+        let $inputs = document.querySelectorAll('.bass-key-wrap')
+        $inputs.forEach($input => {
+            let $checkbox = $input.querySelector('input');
+            $checkbox.checked = "";
+        });
     }
+
+    // function noteLengthSetter() {
+    //     let length = parseInt(document.getElementById('bass-length-slider').value, 10);
+    //     if (length === 5) {
+    //         return "1n"
+    //     } else if (length === 4) {
+    //         console.log("2n")
+    //         return "2n"
+    //     } else if (length === 3) {
+    //         console.log("4n")
+    //         return "4n"
+    //     } else if (length === 2) {
+    //         console.log("8n")
+    //         return "8n"
+    //     } else if (length === 1) {
+    //         console.log("16n")
+    //         return "16n"
+    //     }
+    // }
 
 })

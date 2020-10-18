@@ -42,6 +42,7 @@
     justify-content: center;
     align-items: center; 
     margin-bottom: 20px; 
+    width: 560px;
 }
 
 .chordal-synth-wrap {
@@ -51,7 +52,7 @@
     margin-left: auto;
     padding-top: 1%;
     background-color: #556d4a;
-    margin-right: auto;
+    margin-right: 50px;
     padding-bottom: 0;
     box-shadow: -1px 1px #ffb22e, -2px 2px #ffb22e, -3px 3px #ffb22e, -4px 4px #ffb22e, -5px 5px #ffb22e;
 }
@@ -59,6 +60,7 @@
 .chords-bar-headers {
   display: flex;
   height: 28px;
+  margin-top: -14px;
 }
 
 .chords-bar-headers-2 {
