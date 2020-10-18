@@ -157,23 +157,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // function noteLengthSetter() {
-    //     let length = parseInt(document.getElementById('bass-length-slider').value, 10);
-    //     if (length === 5) {
-    //         return "1n"
-    //     } else if (length === 4) {
-    //         console.log("2n")
-    //         return "2n"
-    //     } else if (length === 3) {
-    //         console.log("4n")
-    //         return "4n"
-    //     } else if (length === 2) {
-    //         console.log("8n")
-    //         return "8n"
-    //     } else if (length === 1) {
-    //         console.log("16n")
-    //         return "16n"
-    //     }
-    // }
-
 })
