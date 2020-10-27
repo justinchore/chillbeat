@@ -175,4 +175,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    function bassExampleOne() {
+        let $allBass = document.querySelectorAll('.bass-key-row');
+        let allBass = Array.from($allBass); 
+        let $firstBass = allBass.slice(0, 32); 
+        let $secondBass = allBass.slice(32, 64); 
+        let $thirdBass = allBass.slice(64, 96); 
+        let $sixthBass = allBass.slice(160, 192); 
+        let $seventhBas = allBass.slice(192, 224); 
+        let $eigthBass = allBass.slice(224, 256); 
+
+        $firstBass[0].querySelector('input').checked = true;
+        $firstBass[12].querySelector('input').checked = true;
+        $secondBass[28].querySelector('input').checked = true;
+        $thirdBass[8].querySelector('input').checked = true;
+        $sixthBass[16].querySelector('input').checked = true;
+        // $seventhBass[12].querySelector('input').checked = true;
+        $eigthBass[4].querySelector('input').checked = true;
+        $eigthBass[6].querySelector('input').checked = true;
+        $eigthBass[20].querySelector('input').checked = true;
+        $eigthBass[22].querySelector('input').checked = true;
+        $eigthBass[29].querySelector('input').checked = true; 
+
+    }
+
 })
