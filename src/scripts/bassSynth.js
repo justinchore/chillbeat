@@ -199,4 +199,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
+    function bassExampleTwo() {
+        let $allBass = document.querySelectorAll('.bass-key-row');
+        let allBass = Array.from($allBass); 
+        let $firstBass = allBass.slice(0, 32); 
+        let $secondBass = allBass.slice(32, 64); 
+        let $thirdBass = allBass.slice(64, 96); 
+        let $fourthBass = allBass.slice(96, 128); 
+
+        $firstBass[12].querySelector('input').checked = true;
+        $secondBass[8].querySelector('input').checked = true;
+        $thirdBass[0].querySelector('input').checked = true;
+        $fourthBass[28].querySelector('input').checked = true; 
+    }
+
 })

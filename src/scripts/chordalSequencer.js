@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let $third = allChords.slice(64, 96);
         let $fourth = allChords.slice(96, 128); 
 
-        $first[12].querySelector('  input').checked = true; 
+        $first[12].querySelector('input').checked = true; 
         $second[8].querySelector('input').checked = true; 
         $third[0].querySelector('input').checked = true; 
         $fourth[28].querySelector('input').checked = true; 
