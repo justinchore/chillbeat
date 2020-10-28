@@ -138,6 +138,15 @@
     color: white;
     font-weight: bold;
     font-size: 12px;
-    margin: auto; 
+    position: absolute; 
+    margin-top: 4px;
+}
+
+.drum-samples {
+  position: absolute; 
+}
+
+#drums-volume-slider {
+  margin-left: 46px;
 }
 
