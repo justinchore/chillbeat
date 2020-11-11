@@ -9,12 +9,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@1,700&family=Lemonada:wght@700&display=swap"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/main.css" />
     <link rel="shortcut icon" href="#">
     <title>Document</title>
   </head>
 
   <body>
+          <div id="about" class="modal">
+                  <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <div class="header-about"><h2>Chillbeat</h2></div>
+                          <div class="about-main-content">
+                                <div class="about-inner-header">
+                                        <h4>DS-906 Drum Machine</h4>        
+                                </div>
+                                <div class="about-inner-content">
+                                        <p>The DS-906 Drum Machine is a three-step drum sequencer. The length of 1 loop is 2 measures of 4 beats each, making it a total of 8 beats per loop. </p>
+                                        <p>Each beat is divided into 4 sub-beats. You can use your mouse to click in a drum hit on a location.</p>
+                                        <p>Try the "BEAT 1" and "BEAT 2" to see examples or to build up a drum beat of your own from a template!</p>
+                                </div>
+
+                                <div class="about-inner-header">
+                                        <h4>CB-32 Chord Sequencer</h4>
+                                </div>
+                                <div class="about-inner-content">
+                                        <p>The CB-32 is an eight-step chord sequencer. The length of 1 loop is 2 measures of 4 beats each,
+                                                making it a total of 8 beats per loop. </p>
+                                        <p>Each beat is divided into 4 sub-beats. You can use your mouse to place in a chord on a location.</p>
+                                        <p>Each chord is labeled with its roman numeral number in the major scale.</p>
+                                        <p>Try the "EX.1" and "EX.2" buttons to see examples or to build up a progression of your own from a template!</p>
+                                        <p>Also try playing around with the "LENGTH" and "REVERB" sliders for a different sound.</p>
+                                </div>
+                                <div class="about-inner-header">
+                                        <h4>BB-1 Bass</h4>
+                                </div>
+                                <div class="about-inner-content">
+                                        <p>The BB-1 is an eight-step bass sequencer. The length of 1 loop is 2 measures of 4 beats each,
+                                                making it a total of 8 beats per loop. </p>
+                                        <p>Each beat is divided into 4 sub-beats. You can use your mouse to place a note on a location.</p>
+                                        <p>Each note is labeled with its roman numeral number in the major scale.</p>
+                                        <p>Try the "EX.1" and "EX.2" buttons to see examples or to build up a progression of your own from a template!</p>
+                                        <p>Keep in mind the roman numerals of the chords on the beats when building your bass part. For example, you wouldn't want the IV bass note on the same beat as the III chord.</p>
+                                        <p>Also try playing around with the "LENGTH" and "REVERB" sliders for a different sound.</p>
+                                </div>
+                                <div class="about-inner-header">
+                                        <h4>OUTPUT/MAIN</h4>
+                                </div>
+                                <div class="about-inner-content">
+                                        <p>The BPM ADJUST slider controls the speed of the track.</p>
+                                        <p>The SWING ADJUST slider controls the space between of each beat.</p>
+                                        <p>Experiment with different combinations!</p>
+                                </div>
+                          </div>
+                  </div>
+          </div>
     <script src="./dist/main.js"></script>
         <div class="header-title">
         <div class="header-text">
@@ -22,9 +71,11 @@
               <h1>chillbeat</h1>  
             </div>
             <div class="header-links">
+
                 <a href="https://justinchore.github.io/" class="link">Portfolio</a>
                 <span><a href="https://github.com/justinchore/chillbeat" class="link">GitHub</a></span>
                 <span><a href="https://www.linkedin.com/in/justin-cho-2500891ba/"class="link">LinkedIn</a></span>
+                <span><a class="link" id="about-link">About</a></span>
             </div>
         </div>
         </div>
