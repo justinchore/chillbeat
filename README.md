@@ -8,7 +8,9 @@ Chillbeat was built using:
 
 ## Background and Overview  
 Chillbeat is a browser beat maker designed to make music composing intuitive and simple. 
-(https://justinchore.github.io/chillbeat/ "Live Site")
+[Live Site](https://justinchore.github.io/chillbeat/)
+
+![alt text](https://github.com/justinchore/chillbeat/blob/master/src/images/chillbeat_pic.png "chillbeat picture")
 
 ## Wireframes 
 The app will be a single screen with various sequencers. A space bar will toggle start for all sequencers and have a cursor to visually represent the playback's position in the the grid. The right side of the drum sequencer there will be a bpm adjuster as well as buttons for different samples (3) for each part of the drums. There will be a button to clear every "cell" in the sequencer as well. Users can click an occupied cell and use directional keys to further adjust the note in 2 increments (earlier or later). A modal will be incorporated explaining the app and its functionalities. 
