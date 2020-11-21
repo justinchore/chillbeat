@@ -12,26 +12,11 @@ Chillbeat is a browser beat maker designed to make music composing intuitive and
 
 ![alt text](https://github.com/justinchore/chillbeat/blob/master/src/images/chillbeat_pic.png "chillbeat picture")
 
-## Wireframes 
-The app will be a single screen with various sequencers. A space bar will toggle start for all sequencers and have a cursor to visually represent the playback's position in the the grid. The right side of the drum sequencer there will be a bpm adjuster as well as buttons for different samples (3) for each part of the drums. There will be a button to clear every "cell" in the sequencer as well. Users can click an occupied cell and use directional keys to further adjust the note in 2 increments (earlier or later). A modal will be incorporated explaining the app and its functionalities. 
+## Sequencers 
+Chillbeat has three instrument sequencers for users to interact with. Each sequencer houses 8 beats, each divided into 4 sub-beats. Each sequencer uses an instrument from the Tone.js library. Each "beat" is iterated through, allowing users to place a sound into different locations. All three sequencers share the same Transport (master output), allowing for pause/play functionality and other global changes to the music. Buttons for effects, volume, and examples are in each of the sequencers, changing the particular sequencer's sound in the master output. 
 
-
-## Implementation Timeline 
-
-### Day 1: 
-  - Setup session to work with Tone.js and p5. 
-  - Create a sequencer for the drums, and figure out having inner "grids" inside of a cell 
-  - Create a bpm slider 
-  - Incorporate the samples and switching from sample to sample 
-  - Create buttons for each sample 
-  - Style the sequencer and buttons (simple) 
-  
-### Day 2: 
-  - Research Tone.js functionality to create a chordal sequencer and know how to use effects 
-  - Implement sequencer logic from drums sequencer but instead of samples, have the sequencer generate sounds from inside the application. (no need for inner grid)
-  - Create effects buttons to change the output sounds of the chords
-
-### Day 3: 
-   - Test all functionality
-   - Style both sequencer and buttons in a more detailed way 
-   - Work on the header containing the about model and my information 
+## Master Output 
+All three sequencers feed into the OUTPUT/MAIN module, which controls the play/pause, tempo, and swing controls. 
+ - Play/Pause: The button can be controlled in two ways - by spacebar and click. 
+ - Tempo: This slider is linked to the output of every sequencer, changing the speed of the iteration through each sequence. 
+ - Swing: This slider is linked to a numeric value of the space between each note. Increasing the slider value places more space between each note,  creating a "swung" feeling in the music. 
